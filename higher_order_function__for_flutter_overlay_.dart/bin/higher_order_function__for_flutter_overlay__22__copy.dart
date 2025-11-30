@@ -1,32 +1,8 @@
 import 'dart:async';
-import 'dart:convert';
+// import 'dart:convert';
 import 'dart:typed_data';
 
-void main(List<String> arguments) {
-  
-  final overlay = AuthScreenOverlay.instance(
-    builder: (onDone) {
-
-      // providing a password
-      Future.delayed(const Duration(seconds: 5), () {
-        onDone(Uint8List.fromList(utf8.encode('password123')));
-      });
-
-      // onDone(Uint8List.fromList(utf8.encode('password123')));
-
-      return true;
-    },
-  );
-
-  print('show loginscreen ');
-  overlay.show().then((password) {
-    if (password != null) {
-      print('Password received: ${utf8.decode(password)}');
-    } else {
-      print('No password provided.');
-    }
-  });
-}
+void main(List<String> arguments) {}
 
 /// true means loginScreen is shown and then, later closed
 typedef ContentBuilder = bool Function(bool Function(Uint8List? result) ondone);
@@ -66,16 +42,15 @@ class AuthScreenOverlay {
       /// this function is called by loginScreen to provide "password" to completer
       (password) {
         _hide();
-
-        print("running completer");
         onDone(password);
 
         // completer run with provided "password"
         return true;
       },
+
+      
     );
 
-    print('isLoginScreenShownAndRemoved -->');
     print(isLoginScreenShownAndRemoved);
 
     // final password = <Uint8List>[ 97, 98, 99, 100, 101 ];
