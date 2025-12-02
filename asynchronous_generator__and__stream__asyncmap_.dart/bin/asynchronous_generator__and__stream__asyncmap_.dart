@@ -1,3 +1,15 @@
+
+// INPUT
+// 'rust'
+// 'dart'
+// 'python'
+
+// OUTPUT
+//  💻 r-u-s-t 💻 d-a-r-t 💻 p-y-t-h-o-n 
+
+// Steam<String> --> Stream<List<String>> --> Future<String> --> String
+
+
 void main(List<String> arguments) async {
   final streamOfLanguages = getLanguages();
 
