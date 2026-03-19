@@ -26,12 +26,27 @@ List<Exercise> runWeeklyPlan(List<Entry> weeklyPlan) {
       runAllExercises.add(exercise);
     }
 
-    if (day.contains(Exercise.pullUp)) {
+    if (day.contains(Exercise.pullUp) || day.contains(Exercise.pushUp)) {
       runAllExercises.add(Exercise.tenMinBreak);
     }
   }
 
   return runAllExercises;
 }
+
+
+// * Defines an `Exercise` enum representing workout activities like push-ups, pull-ups, running, break, and rest day.
+// * Uses `typedef Entry = List<Exercise>` to represent one day’s workout plan.
+// * In `main()`, creates three daily plans: Sunday, Monday, and Tuesday.
+// * Combines them into `weeklyPlan`, a list of workout days.
+
+// * Calls `runWeeklyPlan()` to process the weekly schedule.
+// * The function loops through each day using a nested loop.
+// * Each exercise is added to `runAllExercises`, flattening the structure.
+// * If a day includes push-ups or pull-ups, a ten-minute break is added.
+// * Returns the final flattened workout list.
+
+// * Prints the completed execution plan.
+
 
 // D:\src_dev\flutter\DART-PYTHON-RUST--TIPS-AND-TRICKS-\code-\dartConcepts\loop__nested_loop\bin\loop__11aa__nested_loop__real_world_usecase_.dart
