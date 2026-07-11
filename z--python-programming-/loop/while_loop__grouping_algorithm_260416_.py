@@ -99,7 +99,7 @@ def compute_slot_groups(
 
 # Let's create a workout: 2 Squats, 1 Superset, 1 Bench Press
 test_slots = [
-    Slot([Entry(101, "Squat")]),  # Index 0
+    Slot([Entry(101, "Squat")]),  # Index 　0
     Slot([Entry(101, "Squat")]),  # Index 1
     Slot([Entry(102, "Bench"), Entry(103, "Row")]),  # Index 2 (Superset)
     Slot([Entry(104, "Deadlift")]),  # Index 3
