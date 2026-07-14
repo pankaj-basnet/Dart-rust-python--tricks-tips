@@ -7,5 +7,3 @@ print(format_measurement(120, "mmHg"))
 # OUTPUT:
 # ---- string_concatenation -----
 # 120 mmHg
-
-
